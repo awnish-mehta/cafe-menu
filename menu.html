@@ -1,85 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cafe Menu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,300&family=Righteous&display=swap" rel="stylesheet">
   <style>
-    /* ===== THEME SETTINGS ===== */
+    /* ===== DESIGN 3: Neon Sunset ===== */
     :root {
-      --page-bg: linear-gradient(#d94a9c, #ea9a82);
-      --card-bg: #efefef;
-      --text: #333333;
-      --heading-color: #2b2b2b;
-      --accent: #333333;
-      --muted: #666666;
-      --heading-font: "Pacifico", "Brush Script MT", cursive;
-      --body-font: "Josefin Sans", "Century Gothic", Verdana, sans-serif;
+      --page-bg: linear-gradient(160deg, #1a0b3d 0%, #3a1c71 45%, #d76d77 100%);
+      --card-bg: rgba(45, 19, 75, 0.88);
+      --text: #ffffff;
+      --heading-color: #ffaf7b;
+      --accent: #ff7aa2;
+      --muted: #c4b5da;
+      --heading-font: "Righteous", "Courier New", monospace;
+      --body-font: "Poppins", Arial, sans-serif;
     }
 
-    /* ===== LAYOUT ===== */
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       min-height: 100vh;
-      padding: 30px 16px;
+      padding: 40px 16px;
       background: var(--page-bg);
       background-attachment: fixed;
       color: var(--text);
       font-family: var(--body-font);
     }
+
     .menu {
-      max-width: 840px;
+      max-width: 700px;
       margin: 0 auto;
-      padding: 60px 40px 40px;
+      padding: 52px 44px 44px;
       background: var(--card-bg);
-      border-radius: 12px;
+      border: 1px solid rgba(255, 175, 123, 0.4);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(215, 109, 119, 0.35),
+                  0 20px 50px rgba(0, 0, 0, 0.4);
     }
+
     h1 {
       margin: 0;
       text-align: center;
       font-family: var(--heading-font);
       font-weight: 400;
       font-size: 4rem;
-      line-height: 1.2;
+      letter-spacing: 4px;
       color: var(--heading-color);
+      text-shadow: 0 0 10px rgba(255, 175, 123, 0.7),
+                   0 0 28px rgba(215, 109, 119, 0.6);
     }
+
     .hours {
-      margin: 20px 0 30px;
+      margin: 14px 0 32px;
       text-align: center;
       font-style: italic;
       font-weight: 300;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
       color: var(--muted);
     }
+
     h2 {
-      margin: 28px 0 0;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--accent);
-      font-size: 1.6rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      margin: 34px 0 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, #ffaf7b, #d76d77, transparent) 1;
+      font-family: var(--heading-font);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
       color: var(--accent);
     }
+
     .row {
       display: flex;
       justify-content: space-between;
-      font-size: 1.2rem;
-      font-weight: 400;
       margin-top: 18px;
+      padding: 4px 8px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: background 0.2s ease;
     }
+
+    .row:hover {
+      background: rgba(255, 175, 123, 0.12);
+    }
+
+    .row span:last-child {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
     .desc {
-      margin: 4px 0 0;
-      font-size: 0.9rem;
+      margin: 2px 0 0;
+      padding: 0 8px;
+      font-size: 0.85rem;
       font-style: italic;
       font-weight: 300;
       color: var(--muted);
     }
   </style>
 </head>
+
 <body>
   <div class="menu">
     <h1>Menu</h1>
@@ -101,4 +130,5 @@
     <p class="desc">Double espresso with steamed milk and foam</p>
   </div>
 </body>
+
 </html>
