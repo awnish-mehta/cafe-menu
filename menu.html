@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafe Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    /* ===== THEME SETTINGS ===== */
+    :root {
+      --page-bg: linear-gradient(#d94a9c, #ea9a82);
+      --card-bg: #efefef;
+      --text: #333333;
+      --heading-color: #2b2b2b;
+      --accent: #333333;
+      --muted: #666666;
+      --heading-font: "Pacifico", "Brush Script MT", cursive;
+      --body-font: "Josefin Sans", "Century Gothic", Verdana, sans-serif;
+    }
+
+    /* ===== LAYOUT ===== */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 30px 16px;
+      background: var(--page-bg);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--body-font);
+    }
+    .menu {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 60px 40px 40px;
+      background: var(--card-bg);
+      border-radius: 12px;
+    }
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-family: var(--heading-font);
+      font-weight: 400;
+      font-size: 4rem;
+      line-height: 1.2;
+      color: var(--heading-color);
+    }
+    .hours {
+      margin: 20px 0 30px;
+      text-align: center;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    h2 {
+      margin: 28px 0 0;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--accent);
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-top: 18px;
+    }
+    .desc {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h1>Menu</h1>
+    <p class="hours">Open from 8am to 9pm every day</p>
+    <h2>Sandwiches and wraps</h2>
+    <div class="row"><span>Ham and Cheese</span><span>&pound;2.95</span></div>
+    <p class="desc">Cooked ham, cheddar cheese slices, wholemeal bread</p>
+    <div class="row"><span>Hummus and Feta</span><span>&pound;3.95</span></div>
+    <p class="desc">Roasted red pepper hummus, feta, salad, rye bread</p>
+    <div class="row"><span>Egg classic</span><span>&pound;1.95</span></div>
+    <p class="desc">Free range eggs, mayo, malted granary bread</p>
+    <h2>Soups</h2>
+    <div class="row"><span>Carrot and coriander</span><span>&pound;2.50</span></div>
+    <p class="desc">Warming carrot and coriander seed soup with spices</p>
+    <div class="row"><span>Tomato</span><span>&pound;2.50</span></div>
+    <p class="desc">Homemade organic roasted tomato soup</p>
+    <h2>Hot drinks</h2>
+    <div class="row"><span>Cappuccino</span><span>&pound;2.80</span></div>
+    <p class="desc">Double espresso with steamed milk and foam</p>
+  </div>
+</body>
+</html>
