@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cafe Menu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* ===== THEME SETTINGS ===== */
+    /* ===== DESIGN 1: Midnight Gold ===== */
     :root {
-      --page-bg: linear-gradient(#d94a9c, #ea9a82);
-      --card-bg: #efefef;
-      --text: #333333;
-      --heading-color: #2b2b2b;
-      --accent: #333333;
-      --muted: #666666;
-      --heading-font: "Pacifico", "Brush Script MT", cursive;
-      --body-font: "Josefin Sans", "Century Gothic", Verdana, sans-serif;
+      --page-bg: radial-gradient(circle at top, #2b2118 0%, #0e0c0a 75%);
+      --card-bg: #1a1613;
+      --text: #f1e9dc;
+      --heading-color: #d4af37;
+      --accent: #d4af37;
+      --muted: #a89f91;
+      --heading-font: "Playfair Display", Georgia, serif;
+      --body-font: "Lato", Arial, sans-serif;
     }
 
-    /* ===== LAYOUT ===== */
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       min-height: 100vh;
-      padding: 30px 16px;
+      padding: 40px 16px;
       background: var(--page-bg);
       background-attachment: fixed;
       color: var(--text);
       font-family: var(--body-font);
     }
+
     .menu {
-      max-width: 840px;
+      max-width: 700px;
       margin: 0 auto;
-      padding: 60px 40px 40px;
+      padding: 56px 44px 44px;
       background: var(--card-bg);
-      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 4px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+                  inset 0 0 0 6px var(--card-bg),
+                  inset 0 0 0 7px rgba(212, 175, 55, 0.2);
     }
+
     h1 {
       margin: 0;
       text-align: center;
       font-family: var(--heading-font);
-      font-weight: 400;
-      font-size: 4rem;
-      line-height: 1.2;
+      font-weight: 700;
+      font-size: 3.8rem;
+      letter-spacing: 3px;
       color: var(--heading-color);
     }
+
     .hours {
-      margin: 20px 0 30px;
+      margin: 14px 0 34px;
       text-align: center;
       font-style: italic;
       font-weight: 300;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
       color: var(--muted);
     }
+
+    .hours::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 1px;
+      margin: 18px auto 0;
+      background: var(--accent);
+    }
+
     h2 {
-      margin: 28px 0 0;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--accent);
-      font-size: 1.6rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      margin: 36px 0 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.6);
+      font-family: var(--heading-font);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       color: var(--accent);
     }
+
     .row {
       display: flex;
       justify-content: space-between;
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-top: 18px;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
     }
+
+    .row span:last-child {
+      color: var(--accent);
+      font-weight: 400;
+    }
+
     .desc {
       margin: 4px 0 0;
       font-size: 0.9rem;
@@ -80,6 +109,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="menu">
     <h1>Menu</h1>
@@ -101,4 +131,5 @@
     <p class="desc">Double espresso with steamed milk and foam</p>
   </div>
 </body>
+
 </html>
